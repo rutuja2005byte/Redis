@@ -5,8 +5,10 @@ import (
 	"io"
 	"log"
 	"net"
+	"strings"
 
 	"github.com/tidwall/resp"
+
 )
 
 type Peer struct {
@@ -36,13 +38,13 @@ func (p *Peer) readLoop() error {
 			break
 		}
 		if err != nil {
-			return err
+			log.Fatal(err)
 		}
 
 		var cmd Command
 		if v.Type() == resp.Array {
 			rawCMD := v.Array()[0]
-			switch rawCMD.String() {
+			switch strings.ToLower(rawCMD.String()){
 			case CommandClient:
 				cmd = ClientCommand{
 					value: v.Array()[1].String(),
@@ -62,6 +64,7 @@ func (p *Peer) readLoop() error {
 				}
 			default:
 				fmt.Println("got this unhandled command", rawCMD)
+				continue
 			}
 			p.msgCh <- Message{
 				cmd:  cmd,
