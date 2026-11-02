@@ -36,7 +36,7 @@ func (p *Peer) readLoop() error {
 			break
 		}
 		if err != nil {
-			log.Fatal(err)
+			return err
 		}
 
 		var cmd Command
