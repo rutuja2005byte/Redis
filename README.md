@@ -45,10 +45,6 @@ Run the server:
 go test ./...
 ```
 
-![Project Screenshot](assets/img.png)
-
-![Project Screenshot](assets/img1.png)
-
 ## Learning Outcomes
 
 This project helped me understand Go fundamentals, TCP networking, RESP protocol, goroutines, channels, and concurrent programming.
