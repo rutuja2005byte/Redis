@@ -12,6 +12,16 @@ type server struct {
 	ln net.Listener
 }
 
+func NewServer(cfg config) *server {
+	return &Server{
+		config: cfg,
+	}
+}
+
+func (s *Server) start() error {
+	ln,
+}
+
 func main() {
 
 }
