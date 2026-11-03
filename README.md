@@ -48,3 +48,4 @@ go test ./...
 ## Learning Outcomes
 
 This project helped me understand Go fundamentals, TCP networking, RESP protocol, goroutines, channels, and concurrent programming.
+I wrote up the full journey here: https://go-redis.surge.sh/
