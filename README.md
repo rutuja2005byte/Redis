@@ -1,4 +1,4 @@
-# GoRedis
+*# GoRedis
 
 A lightweight Redis-inspired in-memory key-value store built using Go. This project explores TCP communication, RESP protocol parsing, concurrent client handling, and basic Redis commands.
 
@@ -48,4 +48,6 @@ go test ./...
 ## Learning Outcomes
 
 This project helped me understand Go fundamentals, TCP networking, RESP protocol, goroutines, channels, and concurrent programming.
+
+
 I wrote up the full journey here: https://go-redis.surge.sh/
