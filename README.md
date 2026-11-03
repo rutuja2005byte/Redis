@@ -1,4 +1,4 @@
-*# GoRedis
+GoRedis
 
 A lightweight Redis-inspired in-memory key-value store built using Go. This project explores TCP communication, RESP protocol parsing, concurrent client handling, and basic Redis commands.
 
